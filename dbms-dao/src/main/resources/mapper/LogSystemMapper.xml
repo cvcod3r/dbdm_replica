@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.LogSystemDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.LogSystemEntity">
+        <id column="SYS_LOG_ID" property="sysLogId" />
+        <result column="USER_NAME" property="userName" />
+        <result column="REAL_NAME" property="realName" />
+        <result column="MODULE_NAME" property="moduleName" />
+        <result column="PROCEDURE_INFO" property="procedureInfo" />
+        <result column="IP_ADDRESS" property="ipAddress" />
+        <result column="RESULT_DETAIL" property="resultDetail" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="USER_ID" property="userId" />
+        <result column="CHILD_MODULE" property="childModule" />
+        <result column="OPERATION" property="operation" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SYS_LOG_ID, USER_NAME, REAL_NAME, MODULE_NAME, PROCEDURE_INFO, IP_ADDRESS, RESULT_DETAIL, CREATETIME, USER_ID, CHILD_MODULE, OPERATION
+    </sql>
+
+</mapper>

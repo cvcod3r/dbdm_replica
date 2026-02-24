@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DbaseAccountDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DbaseAccountEntity">
+        <id column="ACCOUNT_ID" property="accountId" />
+        <result column="USERNAME" property="username" />
+        <result column="PASSWORD" property="password" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="DB_ID" property="dbId" />
+        <result column="URL" property="url" />
+        <result column="CONN_NAME" property="connName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ACCOUNT_ID, USERNAME, PASSWORD, STATUS, COMMENTS, IS_DELETE, DB_ID, URL, CONN_NAME
+    </sql>
+
+</mapper>

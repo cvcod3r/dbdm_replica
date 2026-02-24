@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DatabaseConfigDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DatabaseConfigEntity">
+        <id column="DATABASE_ID" property="databaseId" />
+        <result column="DATABASE_NAME" property="databaseName" />
+        <result column="DS_TYPE" property="dsType" />
+        <result column="DB_TYPE" property="dbType" />
+        <result column="DB_DRIVER" property="dbDriver" />
+        <result column="VERSION" property="version" />
+        <result column="ICON_OPEN" property="iconOpen"/>
+        <result column="ICON_CLOSE" property="iconClose"/>
+        <result column="URL_PREFIX" property="urlPrefix"/>
+        <result column="URL_DIR" property="urlDir"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        DATABASE_ID, DATABASE_NAME, DS_TYPE, DB_TYPE, DB_DRIVER, VERSION, ICON_OPEN, ICON_CLOSE, URL_PREFIX, URL_DIR
+    </sql>
+
+</mapper>

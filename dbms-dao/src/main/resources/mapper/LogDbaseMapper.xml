@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.LogDbaseDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.LogDbaseEntity">
+        <id column="DB_LOG_ID" property="dbLogId" />
+        <result column="DB_CONN_NAME" property="dbConnName" />
+        <result column="DB_URL" property="dbUrl" />
+        <result column="DB_USERNAME" property="dbUsername" />
+        <result column="USER_NAME" property="userName" />
+        <result column="REAL_NAME" property="realName" />
+        <result column="IP_ADDRESS" property="ipAddress" />
+        <result column="SCHEMA_NAME" property="schemaName" />
+        <result column="TABLE_NAME" property="tableName" />
+        <result column="TABLE_COLUMN" property="tableColumn" />
+        <result column="SQL_COMMAND" property="sqlCommand" />
+        <result column="SQL_OPERATION" property="sqlOperation" />
+        <result column="RESULT_DETAIL" property="resultDetail" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="DB_ID" property="dbId" />
+        <result column="USER_ID" property="userId" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="ROW_COUNT" property="rowCount" />
+        <result column="EXEC_TIME" property="execTime" />
+        <result column="DATA_LABELS" property="dataLabels" />
+        <result column="ACTION_TYPE" property="actionType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        DB_LOG_ID, DB_CONN_NAME, DB_URL, DB_USERNAME, USER_NAME, REAL_NAME, IP_ADDRESS, SCHEMA_NAME, TABLE_NAME, TABLE_COLUMN, SQL_COMMAND, SQL_OPERATION, RESULT_DETAIL, COMMENTS, CREATETIME, DB_ID, USER_ID, IS_DELETE, ROW_COUNT, EXEC_TIME, DATA_LABELS, ACTION_TYPE
+    </sql>
+
+</mapper>

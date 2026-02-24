@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.AccessStrategyDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.AccessStrategyEntity">
+        <id column="STRATEGY_ID" property="strategyId" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="DB_ID" property="dbId" />
+        <result column="GROUP_ID" property="groupId" />
+        <result column="RISK_ID" property="riskId" />
+        <result column="USER_ID" property="userId" />
+        <result column="USERNAME" property="username" />
+        <result column="GROUP_NAME" property="groupName" />
+        <result column="URL" property="url" />
+        <result column="ACTION_TYPE" property="actionType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        STRATEGY_ID, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE, DB_ID, GROUP_ID, RISK_ID, USER_ID, USERNAME, GROUP_NAME, URL, ACTION_TYPE
+    </sql>
+
+</mapper>

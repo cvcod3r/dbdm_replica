@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.UserGroupDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.UserGroupEntity">
+        <id column="GROUP_ID" property="groupId" />
+        <result column="GROUP_NAME" property="groupName" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        GROUP_ID, GROUP_NAME, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE
+    </sql>
+
+</mapper>

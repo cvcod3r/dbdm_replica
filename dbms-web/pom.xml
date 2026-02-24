@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dbms</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dbms-web</artifactId>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+<!--        <maven.plugin.version>3.8.1</maven.plugin.version>-->
+<!--        <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>-->
+<!--        <jib-maven-plugin.version>1.5.1</jib-maven-plugin.version>-->
+<!--        <skipTests>true</skipTests>-->
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>nexus-tencentyun</id>
+            <name>tencent maven</name>
+            <url>http://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dameng</groupId>
+            <artifactId>DmJdbcDriver18</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dameng</groupId>
+            <artifactId>DmDialect-for-hibernate5.0</artifactId>
+<!--            <version>8.1.1.49</version>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.kingbase8</groupId>
+            <artifactId>kingbase8</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gbase.jdbc</groupId>
+            <artifactId>gbase-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gbase.jdbc</groupId>
+            <artifactId>gbase8a-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.oscar.jdbc</groupId>
+            <artifactId>oscarJDBC16</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hadoop</groupId>-->
+<!--            <artifactId>hadoop-common</artifactId>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hadoop</groupId>-->
+<!--            <artifactId>hadoop-mapreduce-client-core</artifactId>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hbase</groupId>-->
+<!--            <artifactId>hbase-common</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-log4j12</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.CCweixiao</groupId>
+            <artifactId>hbase-sdk-common</artifactId>
+
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.github.CCweixiao</groupId>
+            <artifactId>hbase-sdk-template_2.2</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.CCweixiao</groupId>
+                    <artifactId>hbase-sdk-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hbase</groupId>-->
+<!--            <artifactId>hbase-shaded-client</artifactId>-->
+<!--        </dependency>-->
+
+
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hbase</groupId>-->
+<!--            <artifactId>hbase-client</artifactId>-->
+<!--            <exclusions>-->
+<!--&lt;!&ndash;                <exclusion>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>ch.qos.logback</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>logback-classic</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                </exclusion>&ndash;&gt;-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-log4j12</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+
+        <!-- mybatisplus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!-- pagehelper 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>x-pack-sql-jdbc</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.jetty.aggregate</groupId>
+                    <artifactId>jetty-all</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.phoenix</groupId>-->
+<!--            <artifactId>phoenix-client</artifactId>-->
+<!--            <version>4.15.0-HBase-1.5</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-log4j12</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-api</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hbase</groupId>-->
+<!--            <artifactId>hbase-shaded-client</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-auth</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.phoenix</groupId>
+            <artifactId>phoenix-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.jetty.aggregate</groupId>
+                    <artifactId>jetty-all</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <!-- spring security -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- oauth -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.security.experimental</groupId>-->
+<!--            <artifactId>spring-security-oauth2-authorization-server</artifactId>-->
+<!--            <version>0.1.2</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.nqadmin.rowset/jdbcrowsetimpl -->
+        <dependency>
+            <groupId>com.nqadmin.rowset</groupId>
+            <artifactId>jdbcrowsetimpl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>dbms-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>dbms-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <!--配置各环境的文件-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <!--默认打包时过滤掉所有配置文件-->
+                <excludes>
+                    <exclude>application-dev.yml</exclude>
+                    <exclude>application-prod.yml</exclude>
+                    <exclude>application-test.yml</exclude>
+                    <exclude>application.yml</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <!--配置跟随打包指令环境而配置-Pprod即生产环境 例如：mvn package -Pprod-->
+                <includes>
+                    <include>application-${profileActive}.yml</include>
+                    <include>application.yml</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.dbms.DemoApplication</mainClass>
+                </configuration>
+            </plugin>
+            <!--打包过滤掉测试类-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--&lt;!&ndash;                <version></version>&ndash;&gt;-->
+<!--                <configuration>-->
+<!--                    <skip>true</skip>-->
+<!--                </configuration>-->
+<!--&lt;!&ndash;                <version>2.3.1.RELEASE</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash;工程的入口主类&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <mainClass>com.dbms.DemoApplication</mainClass>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+</project>

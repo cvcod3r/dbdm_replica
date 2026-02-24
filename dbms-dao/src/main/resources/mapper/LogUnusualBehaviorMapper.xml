@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.LogUnusualBehaviorDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.LogUnusualBehaviorEntity">
+        <id column="BEHAVIOR_ID" property="behaviorId" />
+        <result column="USERNAME" property="username" />
+        <result column="ALTER_TYPE" property="alterType" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="USER_ID" property="userId" />
+        <result column="URL" property="url" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        BEHAVIOR_ID, USERNAME, ALTER_TYPE, CREATETIME, USER_ID, URL
+    </sql>
+
+</mapper>

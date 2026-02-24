@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.LogRiskAlertDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.LogRiskAlertEntity">
+        <id column="ALERT_ID" property="alertId" />
+        <result column="DB_URL" property="dbUrl" />
+        <result column="SCHEMA_NAME" property="schemaName" />
+        <result column="USER_NAME" property="userName" />
+        <result column="IP_ADDRESS" property="ipAddress" />
+        <result column="CREATETIME" property="createTime" />
+        <result column="RULE_TYPE" property="ruleType" />
+        <result column="RISK_LEVEL" property="riskLevel" />
+        <result column="SQL_OPERATION" property="sqlOperation" />
+        <result column="SQL" property="sql" />
+<!--        <result column="TABLE_COLUMN" property="tableColumn" />-->
+<!--        <result column="TABLE_NAME" property="tableName" />-->
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ALERT_ID, DB_URL, SCHEMA_NAME, USER_NAME, IP_ADDRESS, CREATETIME,RULE_TYPE,RISK_LEVEL,SQL_OPERATION,SQL
+    </sql>
+
+</mapper>

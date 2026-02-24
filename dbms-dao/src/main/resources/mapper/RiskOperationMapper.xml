@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.RiskOperationDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.RiskOperationEntity">
+        <id column="RISK_ID" property="riskId" />
+        <result column="DS_TYPE" property="dsType" />
+        <result column="OPERATION_KEY" property="operationKey" />
+        <result column="ACTION_TYPE" property="actionType" />
+        <result column="SCHEMA_NAME" property="schemaName" />
+        <result column="SCHEMA_PRIVILEGE" property="schemaPrivilege" />
+        <result column="TABLE_NAME" property="tableName" />
+        <result column="TABLE_PRIVILEGE" property="tablePrivilege" />
+        <result column="COLUMN_PRIVILEGE" property="columnPrivilege" />
+        <result column="LABEL_STATUS" property="labelStatus" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="LABEL_ID" property="labelId" />
+        <result column="DB_ID" property="dbId" />
+        <result column="URL" property="url" />
+        <result column="COLUMN_SENSITIVE" property="columnSensitive" />
+        <result column="TABLE_ROW_LIMIT" property="tableRowLimit" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        RISK_ID, DS_TYPE, OPERATION_KEY, ACTION_TYPE, SCHEMA_NAME, SCHEMA_PRIVILEGE, TABLE_NAME, TABLE_PRIVILEGE, COLUMN_PRIVILEGE, LABEL_STATUS, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE, LABEL_ID, DB_ID, URL, COLUMN_SENSITIVE, TABLE_ROW_LIMIT
+    </sql>
+
+</mapper>

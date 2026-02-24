@@ -1,0 +1,176 @@
+# 项目相关配置
+dbms:
+  # 名称
+  name: DBMS
+  # 版本
+  version: 1.0.0
+  # 版权年份
+  copyrightYear: 2023
+  # 获取ip地址开关
+  addressEnabled: true
+#  # 验证码类型 math 数组计算 char 字符验证
+#  captchaType: math
+
+
+server:
+  port: 8081
+  servlet:
+    context-path: /api
+
+
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: @profileActive@
+  #数据库配置
+  #开启上传文件
+  servlet:
+    multipart:
+      enabled: true
+  # redis 配置
+  redis:
+    # 地址
+    host: 82.157.239.171
+    #    host: 127.0.0.1
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码
+    password: uchiha@123
+    #    password:
+    # 连接超时时间
+    timeout: 10000
+    lettuce:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 100
+        # 连接池中的最大空闲连接
+        max-idle: 300
+        # 连接池的最大数据库连接数
+        max-active: 500
+        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: dm.jdbc.driver.DmDriver
+    druid:
+      stat-view-servlet: # 配置监控页功能
+        enabled: true
+        login-username: admin #配置druid登录账号密码
+        login-password: 123
+        reset-enable: false
+        # 设置白名单，不填则允许所有访问
+        allow:
+        url-pattern: /druid/*
+      # 主库数据源
+      master:
+        url: jdbc:dm://81.70.167.102:5236/DBMS?clobAsString=1&useUnicode=true&characterEncoding=utf-8
+        #数据库的使用用户
+        username: SYSDBA
+        #实际使用数据库的密码
+        password: SYSDBA001
+        #    url: jdbc:dm://127.0.0.1:5236/DBMS?clobAsString=1&useUnicode=true&characterEncoding=utf-8
+        #      #数据库的使用用户
+        #    username: SYSDBA
+        #    #实际使用数据库的密码
+        #    password: SYSDBA
+      # 从库数据源
+      slave:
+        # 从数据源开关/默认关闭
+        enabled: false
+        url:
+        username:
+        password:
+      # 初始连接数
+      initialSize: 5
+      # 最小连接池数量
+      minIdle: 10
+      # 最大连接池数量
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置连接超时时间
+      connectTimeout: 30000
+      # 配置网络超时时间
+      socketTimeout: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      maxEvictableIdleTimeMillis: 900000
+      # 配置检测连接是否有效
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      webStatFilter:
+        enabled: true
+      aop-patterns: com.dbms.dao.*
+      filter:
+        stat:
+          enabled: true
+          # 慢SQL记录
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+  # token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
+
+#Mybatis-Plus配置
+mybatis-plus:
+  configuration:
+    cache-enabled: false
+    local-cache-scope: statement
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      capital-mode: true
+      column-format: "\"%s\""
+      schema: DBMS   # 达梦需要加上这个，如果不加，则查询不到该模式下的数据
+#      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #是否将sql打印到控制面板(该配置会将sql语句和查询的结果都打印到控制台)
+
+  # 搜索指定包别名
+  mapper-locations: classpath*:/mapper/*.xml
+
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+# 防止XSS攻击
+xss:
+  # 过滤开关
+  enabled: true
+  # 排除链接（多个用逗号分隔）
+  excludes: /user/login
+  # 匹配链接
+  urlPatterns: /user/*,/monitor/*,/user-group/*
+
+#monitor
+monitor:
+  filePath: /etc/dbms/monitor.prop
+
+# 自定义文件保存路径
+gorit:
+  file:
+    root:
+      path: F:\dev\

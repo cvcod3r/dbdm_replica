@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.SqlNoteDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.SqlNoteEntity">
+        <id column="NOTE_ID" property="noteId" />
+        <result column="NOTE_NAME" property="noteName" />
+        <result column="SQLS" property="sqls" />
+        <result column="USER_ID" property="userId" />
+        <result column="DB_ID" property="dbId" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="IS_DELETE" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        NOTE_ID, NOTE_NAME, SQLS, USER_ID, DB_ID, CREATETIME, IS_DELETE
+    </sql>
+
+</mapper>

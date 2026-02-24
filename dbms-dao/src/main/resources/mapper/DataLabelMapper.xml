@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DataLabelDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DataLabelEntity">
+        <id column="LABEL_ID" property="labelId" />
+        <result column="LABEL_NAME" property="labelName" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="RULE_ID" property="ruleId" />
+        <result column="LABEL_TYPE" property="labelType" />
+        <result column="PARAM" property="param" />
+        <result column="LABEL_REG" property="labelReg" />
+        <result column="MODIFY" property="modify" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        LABEL_ID, LABEL_NAME, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE, RULE_ID, LABEL_TYPE, PARAM , LABEL_REG , MODIFY
+    </sql>
+
+</mapper>

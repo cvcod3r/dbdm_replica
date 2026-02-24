@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DbaseAccessDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DbaseAccessEntity">
+        <id column="ACCESS_ID" property="accessId" />
+        <result column="URL" property="url" />
+        <result column="DB_TYPE" property="dbType" />
+        <result column="DS_TYPE" property="dsType" />
+        <result column="GROUP_NAME" property="groupName" />
+        <result column="UNAME" property="uName" />
+        <result column="USERNAME" property="username" />
+        <result column="PASSWORD" property="password" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="DB_ID" property="dbId" />
+        <result column="GROUP_ID" property="groupId" />
+        <result column="USER_ID" property="userId" />
+        <result column="ACCOUNT_ID" property="accountId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ACCESS_ID, URL, DB_TYPE, DS_TYPE, GROUP_NAME, UNAME, USERNAME, PASSWORD, STATUS, COMMENTS, IS_DELETE, DB_ID, GROUP_ID, USER_ID, ACCOUNT_ID
+    </sql>
+
+</mapper>

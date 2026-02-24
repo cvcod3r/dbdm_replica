@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DbaseDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DbaseEntity">
+        <id column="DB_ID" property="dbId" />
+        <result column="HOST" property="host" />
+        <result column="PORT" property="port" />
+        <result column="USERNAME" property="username" />
+        <result column="PASSWORD" property="password" />
+        <result column="DB_TYPE" property="dbType" />
+        <result column="VERSION" property="version" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="DS_TYPE" property="dsType" />
+        <result column="URL" property="url" />
+        <result column="DB_NAME" property="dbName" />
+        <result column="CONN_NAME" property="connName" />
+        <result column="DB_DRIVER" property="dbDriver"/>
+        <result column="ICON_OPEN" property="iconOpen"/>
+        <result column="ICON_CLOSE" property="iconClose"/>
+        <result column="URL_PREFIX" property="urlPrefix"/>
+        <result column="URL_DIR" property="urlDir"/>
+        <result column="SSH_USERNAME" property="sshUsername"/>
+        <result column="SSH_PASSWORD" property="sshPassword"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        DB_ID, HOST, PORT, USERNAME, PASSWORD, DB_TYPE, VERSION, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE, DS_TYPE, URL, DB_NAME, DB_DRIVER, ICON_OPEN, ICON_CLOSE, URL_PREFIX, URL_DIR, SSH_USERNAME, SSH_PASSWORD
+    </sql>
+
+</mapper>

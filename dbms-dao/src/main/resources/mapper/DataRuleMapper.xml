@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.DataRuleDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.DataRuleEntity">
+        <id column="RULE_ID" property="ruleId" />
+        <result column="RULE_NAME" property="ruleName" />
+        <result column="RULE_REG" property="ruleReg" />
+        <result column="RULE_CODE" property="ruleCode" />
+        <result column="DATA_EXAMPLE" property="dataExample" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        RULE_ID, RULE_NAME, RULE_REG, RULE_CODE, DATA_EXAMPLE, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE
+    </sql>
+
+</mapper>

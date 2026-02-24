@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.SensitiveScanResultDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.SensitiveScanResultEntity">
+        <id column="DB_ID" property="dbId" />
+        <result column="URL" property="url" />
+        <result column="SCHEMA_NAME" property="schemaName" />
+        <result column="TABLE_NAME" property="tableName" />
+        <result column="COLUMN_NAME" property="columnName" />
+        <result column="COLUMN_NAME_RESULT" property="columnNameResult" />
+        <result column="COLUMN_REMARK_RESULT" property="columnRemarkResult" />
+        <result column="COLUMN_CONTENT_RESULT" property="columnContentResult" />
+        <result column="SCAN_TIME" property="scanTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        DB_ID, URL, SCHEMA_NAME, TABLE_NAME, COLUMN_NAME, COLUMN_NAME_RESULT, COLUMN_REMARK_RESULT, COLUMN_CONTENT_RESULT, SCAN_TIME
+    </sql>
+
+</mapper>

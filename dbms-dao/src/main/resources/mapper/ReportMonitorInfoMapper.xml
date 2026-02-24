@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.ReportMonitorInfoDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.ReportMonitorInfoEntity">
+        <id column="INFO_ID" property="infoId" />
+        <result column="CPU_USAGE" property="cpuUsage" />
+        <result column="MEM_USAGE" property="memUsage" />
+        <result column="DISK_USAGE" property="diskUsage" />
+        <result column="WEB_CONSOLE_SERVICE" property="webConsoleService" />
+        <result column="LOG_ACCEP_SERVICE" property="logAccepService" />
+        <result column="NAME" property="name" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        INFO_ID, CPU_USAGE, MEM_USAGE, DISK_USAGE, WEB_CONSOLE_SERVICE, LOG_ACCEP_SERVICE, NAME
+    </sql>
+
+</mapper>

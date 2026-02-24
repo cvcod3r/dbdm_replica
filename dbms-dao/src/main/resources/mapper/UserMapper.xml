@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.UserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.UserEntity">
+        <id column="USER_ID" property="userId" />
+        <result column="USER_NAME" property="userName" />
+        <result column="PASSWORD" property="password" />
+        <result column="REALNAME" property="realname" />
+        <result column="MOBILE_NUMBER" property="mobileNumber" />
+        <result column="E_MAIL" property="eMail" />
+        <result column="STATUS" property="status" />
+        <result column="COMMENTS" property="comments" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="GROUP_ID" property="groupId" />
+        <result column="ROLE_ID" property="roleId" />
+        <result column="ROLE_NAME" property="roleName" />
+        <result column="GROUP_NAME" property="groupName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, USER_NAME, PASSWORD, REALNAME, MOBILE_NUMBER, E_MAIL, STATUS, COMMENTS, CREATETIME, UPDATETIME, IS_DELETE, GROUP_ID, ROLE_ID, ROLE_NAME, GROUP_NAME
+    </sql>
+
+</mapper>

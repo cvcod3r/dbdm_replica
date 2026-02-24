@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.WorkOrderDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.WorkOrderEntity">
+        <id column="WORK_ORDER_ID" property="workOrderId" />
+        <result column="USER_ID" property="userId" />
+        <result column="USERNAME" property="username" />
+        <result column="REAL_NAME" property="realName" />
+        <result column="DB_ID" property="dbId" />
+        <result column="DB_URL" property="dbUrl" />
+        <result column="DB_TYPE" property="dbType" />
+        <result column="SQL_STATEMENT" property="sqlStatement" />
+        <result column="LIMIT_COUNT" property="limitCount" />
+        <result column="PROCESS_STATUS" property="processStatus" />
+        <result column="PROCESS_RESULT" property="processResult" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="PROCESS_TIME" property="processTime" />
+        <result column="PROCESSOR" property="processor" />
+        <result column="PROCESS_ID" property="processId" />
+        <result column="PROCESS_COMMENT" property="processComment" />
+        <result column="REMARKS" property="remarks" />
+        <result column="IS_DELETE" property="isDelete" />
+        <result column="STATUS" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        WORK_ORDER_ID, USER_ID, USERNAME, REAL_NAME, DB_ID, DB_URL, DB_TYPE, SQL_STATEMENT, LIMIT_COUNT, PROCESS_STATUS, PROCESS_RESULT, CREATE_TIME, PROCESS_TIME, PROCESSOR, PROCESSOR_ID, PROCESS_COMMENT, REMARKS, IS_DELETE, STATUS
+    </sql>
+
+</mapper>

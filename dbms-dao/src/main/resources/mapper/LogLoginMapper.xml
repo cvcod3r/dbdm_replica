@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbms.dao.LogLoginDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dbms.entity.LogLoginEntity">
+        <id column="LOGIN_ID" property="loginId" />
+        <result column="USER_NAME" property="userName" />
+        <result column="REAL_NAME" property="realName" />
+        <result column="IP_ADDRESS" property="ipAddress" />
+        <result column="LOGIN_STATUS" property="loginStatus" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="USER_ID" property="userId" />
+        <result column="COMMENTS" property="comments" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        LOGIN_ID, USER_NAME, REAL_NAME, IP_ADDRESS, LOGIN_STATUS, CREATETIME, USER_ID, COMMENTS
+    </sql>
+
+</mapper>
