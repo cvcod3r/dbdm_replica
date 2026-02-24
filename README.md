@@ -1,3 +1,1 @@
-# dbms
-数据库后端
-"# dbdm_replica" 
+读研时候课题组的横向项目，给QAX做的数据库运维网关，fork的源仓库设置为private了，故另起一个。
